@@ -1,9 +1,22 @@
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import adapter from '@sveltejs/adapter-netlify';
 
-export default {
-  preprocess: [vitePreprocess()],
-  kit: {
-	adapter: adapter()
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	preprocess: vitePreprocess(),
+	kit: {
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: '404.html',
+			precompress: false,
+			strict: true
+		}),
+		paths: {
+            // Replace 'tu-repo' with the exact name of your GitHub repository
+			base: process.argv.includes('dev') ? '' : '/tu-repo'
+		}
 	}
 };
+
+export default config;

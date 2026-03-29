@@ -3,6 +3,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import Tooltip from '$lib/components/Tooltip.svelte';
+  export const prerender = true;
 	// import { beforeNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/Modal.svelte';
@@ -234,27 +235,6 @@
 
 	.cookieContainer > div {
 		cursor: pointer;
-	}
-
-	footer {
-		font-size: 16px;
-		font-weight: 400;
-		padding: 30px 0;
-		max-width: 900px;
-		text-align: center;
-		width: 100%;
-	}
-
-	footer a {
-		text-decoration: none;
-		color: #4158d0;
-	}
-	footer .svelte {
-		color: #ff3e00;
-	}
-
-	footer .me {
-		color: #ff3e00;
 	}
 
 	@media (min-width: 900px) {
