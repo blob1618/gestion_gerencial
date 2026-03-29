@@ -3,7 +3,6 @@
 	import Button from '$lib/components/Button.svelte';
 	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
 	import Tooltip from '$lib/components/Tooltip.svelte';
-  export const prerender = true;
 	// import { beforeNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import Modal from '$lib/components/Modal.svelte';
@@ -11,6 +10,7 @@
 	import { customBackground } from '$lib/store';
 	import { Email } from '$lib/Constants';
 	// import routes from '$lib/NavRoutes';
+  import { base } from '$app/paths';
 
 	let copied = false;
 	const cookieEnabled = false;

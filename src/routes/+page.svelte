@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from "$app/paths";
+
     // Organizing team data here makes the HTML much cleaner and easier to manage.
     // Make sure to update the competencies to reflect your actual roles!
     const teamMembers = [
@@ -36,7 +38,7 @@
 
 <main>
     <section class="hero">
-        <img class="logo" src="/images/logo-equipo.jpeg" alt="Logo de Seguidores de GAGA" />
+    <img class="logo" src="{base}/images/logo-equipo.jpeg" alt="Logo de Seguidores de GAGA" />
         <h1>Seguidores de GAGA</h1>
         <p class="subtitle">Portfolio de Ingeniería en Sistemas de Información</p>
     </section>
@@ -74,7 +76,7 @@
     <section class="section-block">
         <h2>Desafíos Desarrollados</h2>
         <p>Explora nuestro proceso de aprendizaje y las soluciones propuestas a lo largo de la cursada.</p>
-        <a href="/desafios" class="btn">Ver Desafíos (D3 - D7)</a>
+        <a href="{base}/desafios" class="btn">Ver Desafíos (D3 - D7)</a>
     </section>
 
     <section class="section-block">
