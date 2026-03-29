@@ -44,10 +44,13 @@
     <section class="presentation">
         <h2>Presentación del Equipo</h2>
         <div class="video-container">
-            <video controls preload="metadata">
-                <source src="/videos/presentacion-equipo.mp4" type="video/mp4" />
-                Tu navegador no soporta el elemento de video.
-            </video>
+        <iframe 
+            src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
+            title="Presentación del Equipo Seguidores de GAGA" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
         </div>
         
         <div class="team-grid">
@@ -154,12 +157,15 @@
         margin: 0 auto 2rem auto;
         border-radius: 10px;
         overflow: hidden;
+        /* This forces the container into a perfect 16:9 widescreen box */
+        aspect-ratio: 16 / 9; 
+        background: #000; /* Keeps a clean black background while the video loads */
     }
 
-    video {
+    iframe {
         width: 100%;
-        display: block;
-        background: #000;
+        height: 100%;
+        border: none;
     }
 
     .team-grid {

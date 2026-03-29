@@ -13,8 +13,8 @@ const config = {
 			strict: true
 		}),
 		paths: {
-            // Replace 'tu-repo' with the exact name of your GitHub repository
-			base: process.argv.includes('dev') ? '' : '/tu-repo'
+            // Update this to match your EXACT repo name
+			base: process.argv.includes('dev') ? '' : '/gestion_gerencial'
 		}
 	}
 };

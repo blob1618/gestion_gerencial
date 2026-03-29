@@ -1,14 +1,15 @@
+import { base } from '$app/paths';
 const routes = [
 	{
-		href: '/',
+		href: base + '/',
 		label: 'Home'
 	},
 	{
-		href: '/desafios',
+		href: base + '/desafios',
 		label: 'Desafíos'
 	},
 	{
-		href: '/rpa',
+		href: base + '/rpa',
 		label: 'RPA'
 	}
 ];
