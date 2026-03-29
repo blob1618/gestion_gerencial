@@ -33,13 +33,13 @@
 </script>
 
 <svelte:head>
-    <title>Seguidores de GAGA - Portfolio</title>
+    <title>Stakeholders - Portfolio</title>
 </svelte:head>
 
 <main>
     <section class="hero">
-    <img class="logo" src="{base}/images/logo-equipo.jpeg" alt="Logo de Seguidores de GAGA" />
-        <h1>Seguidores de GAGA</h1>
+    <img class="logo" src="{base}/images/logo-equipo.jpeg" alt="Logo de Stakeholders" />
+        <h1>Stakeholders</h1>
         <p class="subtitle">Portfolio de Ingeniería en Sistemas de Información</p>
     </section>
 
@@ -48,7 +48,7 @@
         <div class="video-container">
         <iframe 
             src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
-            title="Presentación del Equipo Seguidores de GAGA" 
+            title="Presentación del Equipo Stakeholders" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
