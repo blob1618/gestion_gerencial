@@ -1,31 +1,35 @@
-
 const challenges = [
-    {
-        id: "d3",
-        title: "Desafío 3",
-        problem: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
-        solution: "Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.",
-        evidences: ["Documento de arquitectura (PDF)", "Video presentación.mp4"],
-        tools: ["SvelteKit", "TypeScript", "CSS"],
-        reflection: {
-            learned: "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.",
-            doDifferently: "Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.",
-            competencies: "Pensamiento estructurado, Comunicación técnica efectiva."
-        }
-    },
-    {
-        id: "d4",
-        title: "Desafío 4",
-        problem: "Phasellus pellentesque, aliquet consequat mattis, tellus ex efficitur velit, id ullamcorper neque orci vitae eros. Proin mattis cursus ipsum.",
-        solution: "Donec accumsan condimentum odio, at lacinia sem interdum et. Nullam ut sapien arcu. Maecenas et vulputate lorem, in semper metus.",
-        evidences: ["Repositorio de GitHub", "Diagrama de flujo (PNG)"],
-        tools: ["Node.js", "Express", "Postman"],
-        reflection: {
-            learned: "Suspendisse potenti. In hac habitasse platea dictumst. Donec vel libero diam.",
-            doDifferently: "Aliquam erat volutpat. Nam scelerisque tincidunt felis, vel vehicula orci fringilla non.",
-            competencies: "Capacidad de síntesis, Integración interdisciplinaria."
-        }
-    }
+	{
+		id: 'd3',
+		title: 'Desafío 3: Portfolio (Micrositio)',
+		problem:
+			'El equipo tuvo la tarea de diseñar y desarrollar un portfolio digital para documentar nuestro proceso de aprendizaje, producciones y reflexiones a lo largo de la cursada de Gestión Gerencial. El sitio requería una arquitectura de la información estricta, lineamientos de UX específicos (máximo 3 niveles de profundidad, diseño responsive, alta legibilidad) y despliegue automatizado.',
+		solution:
+			'Desarrollamos una aplicación web estática utilizando SvelteKit. La arquitectura utiliza un layout centralizado para mantener una navegación consistente y ruteo dinámico para mostrar cada desafío. Implementamos un tema oscuro responsive y de alto contraste usando CSS puro para asegurar la legibilidad. Finalmente, configuramos un pipeline de CI/CD con GitHub Actions para construir y desplegar automáticamente el sitio en GitHub Pages con cada push a la rama principal.',
+		evidences: [
+			{
+				title: 'URL del Micrositio en vivo (GitHub Pages)',
+				url: 'https://blob1618.github.io/gestion_gerencial'
+			},
+			{
+				title: 'Repositorio de código fuente (GitHub)',
+				url: 'https://github.com/blob1618/gestion_gerencial'
+			},
+			{
+				title: 'Video de presentación del equipo (YouTube Embed)',
+				url: 'https://www.youtube.com/watch?v=YOUR_VIDEO_ID'
+			}
+		],
+		tools: ['SvelteKit', 'TypeScript', 'CSS', 'Vite', 'Git', 'GitHub Actions'],
+		reflection: {
+			learned:
+				'Aprendimos a configurar un proyecto de SvelteKit para la generación de sitios estáticos (SSG) usando @sveltejs/adapter-static. También dominamos el uso de la variable de ruta base ($app/paths) para despliegues en subdirectorios y la configuración de flujos de trabajo automatizados (workflows) en GitHub.',
+			doDifferently:
+				'Para futuros proyectos web, definiríamos un sistema de diseño más estricto y armaríamos un prototipo de la interfaz (UI/UX) en una herramienta como Figma antes de ponernos a codear, en lugar de iterar directamente sobre el CSS puro durante la fase de desarrollo.',
+			competencies:
+				'Pensamiento estructurado, Capacidad de síntesis, Comunicación técnica efectiva.'
+		}
+	}
 ];
 
 export default challenges;

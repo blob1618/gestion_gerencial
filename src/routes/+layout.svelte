@@ -1,18 +1,9 @@
 <script lang="ts">
 	import Navbar from '$lib/components/NavBar.svelte';
-	import Button from '$lib/components/Button.svelte';
-	import FaCopy from 'svelte-icons/fa/FaCopy.svelte';
-	import Tooltip from '$lib/components/Tooltip.svelte';
-	// import { beforeNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
-	import Modal from '$lib/components/Modal.svelte';
 	import { onMount } from 'svelte';
 	import { customBackground } from '$lib/store';
-	import { Email } from '$lib/Constants';
-	// import routes from '$lib/NavRoutes';
-  import { base } from '$app/paths';
 
-	let copied = false;
 	const cookieEnabled = false;
 	$: showCookieModal = false;
 
@@ -39,23 +30,12 @@
 		}
 	};
 
-	const copy = () => {
-		navigator.clipboard.writeText(Email);
-	};
-
 	onMount(() => {
 		const showCookie = localStorage.getItem('showCookieModal');
 		if (showCookie !== null) showCookieModal = JSON.parse(showCookie);
 		else showCookieModal = true;
 	});
 
-	// beforeNavigate(({ to }) => {
-	// 	const pathName = to.pathname;
-	// 	const route = routes.find((route) => pathName === route.href);
-	// 	if (!route.customColor) {
-	// 		customBackground.set('#0a0908');
-	// 	} else customBackground.set(route.customColor);
-	// });
 </script>
 
 <svelte:body use:cssVariables={{ background: $customBackground }} />
@@ -80,43 +60,6 @@
 	</div>
 {/if}
 
-<Modal>
-	<div slot="content" class="modalContainer">
-		<h1>Email:</h1>
-		<div>
-			<p>{Email}</p>
-			&nbsp;
-			<div class="tooltip">
-				<Tooltip tooltip={copied ? 'Copied' : 'Copy'}>
-					<div
-						id="clipboard"
-						role="button"
-						tabindex="0"
-						on:keypress={() => {
-							copied = true;
-							copy();
-							setTimeout(() => {
-								copied = false;
-							}, 500);
-						}}
-						on:click={() => {
-							copied = true;
-							copy();
-							setTimeout(() => {
-								copied = false;
-							}, 500);
-						}}
-					>
-						<div>
-							<FaCopy />
-						</div>
-					</div>
-				</Tooltip>
-			</div>
-		</div>
-		<Button>Send Email</Button>
-	</div>
-</Modal>
 <Navbar segment={$page.url.pathname} />
 
 <slot />

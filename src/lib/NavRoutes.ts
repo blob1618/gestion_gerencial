@@ -9,8 +9,8 @@ const routes = [
 		label: 'Desafíos'
 	},
 	{
-		href: base + '/rpa',
-		label: 'RPA'
+		href: base + '/tpi',
+		label: 'TPI'
 	}
 ];
 

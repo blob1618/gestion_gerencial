@@ -38,9 +38,10 @@
 
 <main>
     <section class="hero">
-    <img class="logo" src="{base}/images/logo-equipo.jpeg" alt="Logo de Stakeholders" />
+    <img class="logo" src="{base}/images/logo-equipo.png" alt="Logo de Stakeholders" />
         <h1>Stakeholders</h1>
-        <p class="subtitle">Portfolio de Ingeniería en Sistemas de Información</p>
+        <p class="subtitle">Ingeniería en Sistemas de Información</p>
+        <p class="subtitle">Portfolio de Gestión Gerencial</p>
     </section>
 
     <section class="presentation">

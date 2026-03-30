@@ -34,14 +34,18 @@
                         <p>{challenge.solution}</p>
                     </div>
 
-                    <div class="section">
-                        <h3>Evidencias</h3>
-                        <ul>
-                            {#each challenge.evidences as evidence}
-                                <li>{evidence}</li>
-                            {/each}
-                        </ul>
-                    </div>
+<div class="section">
+    <h3>Evidencias</h3>
+    <ul>
+        {#each challenge.evidences as evidence}
+            <li>
+                <a href="{evidence.url}" target="_blank" rel="noreferrer" class="evidence-link">
+                    {evidence.title}
+                </a>
+            </li>
+        {/each}
+    </ul>
+</div>
 
                     <div class="section reflection-box">
                         <h3>Reflexión del equipo</h3>
